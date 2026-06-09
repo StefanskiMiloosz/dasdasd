@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <h2>formularz inf03</h2>
+
+        <label for="imie">Wpisz swoje imię</label>
+        <input type="text" id="imie"><br><br>
+
+        <label for="nazwisko">Wpisz swoje nazwisko</label>
+        <input type="text" id="nazwisko"><br><br>
+
+        <label for="zgloszenie">napisz swoje zgloszenie</label><br>
+        <textarea id="zgloszenie" placeholder="Tutaj wpisz swoje zgloszenie">
+        </textarea><br><br>
+
+
+        <input type="checkbox" id="regulamin">
+        <label for="regulamin">Zakceptuj regulamin</label><br><br>
+
+        <button type="button" id="przycisk" onclick="FormularzSpr()">Wyślij</button>
+    </form>
+
+    <p id="wynik"></p>
+
+    <script>
+        function FormularzSpr(){
+            let regulaminz = document.getElementById("regulamin").checked;
+            let wynikz = document.getElementById("wynik");
+            let imiez = document.getElementById("imie").value;
+            let nazwiskoz = document.getElementById("nazwisko").value;
+
+            if(!regulaminz){
+                wynik.innerHTML="NIE ZAZNACZONO REGULAMINU"
+            }
+            else if (imiez==""){
+                wynik.innerHTML="NIE WPISANO IMIENIA"
+            }
+            else if (nazwiskoz==""){
+                wynik.innerHTML="NIE WPISANO NAZWISKA"
+            }
+            else{
+                wynik.innerHTML = "Witaj" + imiez + nazwiskoz + "Wysłałeś zgłoszenie"}
+
+
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>
